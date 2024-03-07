@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Lista de clientes</h2>
+
+<table class="table table-hover table-responsive-xl">
+    <thead class="thead-light">
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Facturación</th>
+    </tr>
+    </thead>
+<tr th:each="cliente : ${clientes}">
+    <th scope="row">[[${cliente.id}]]</th>
+    <td>[[${cliente.nombre}]]</td>
+    <td>[[${cliente.facturacion}]]</td>
+</tr>
+
+</body>
+</html>

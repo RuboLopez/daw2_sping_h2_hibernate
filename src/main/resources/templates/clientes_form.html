@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/clientes/save}" method="post" enctype="multipart/form-data" th:object="${cliente}">
+    <input type="number" th:field="*{id}" id="id" />
+    <input type="text" th:field="*{nombre}" id="nombre" />
+    <input type="number" th:field="*{facturacion}" id="facturacion" />
+    <input type="submit" value="Save" class="btn btn-primary btn-sm mr-2" />
+
+</form>
+</body>
+</html>
